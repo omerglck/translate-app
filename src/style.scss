@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #242424;
+  height: 100vh;
+  overflow-y: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+#main-page {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    @media (max-width: 800px) {
+      font-size: 26px;
+    }
+  }
+}
+
+.upper {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+  .react-select {
+    width: 100%;
+    color: black;
+  }
+}
+.bottom {
+  display: flex;
+  gap: 105px;
+  margin-top: 20px;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+    padding: 10px;
+    font-family: "poppins";
+    resize: vertical; // genişlemesini önledik
+    font-size: 17px;
+    @media (max-width: 800px) {
+      min-height: 200px;
+      max-height: 400px;
+    }
+  }
+}
+textarea:disabled {
+  color: rgb(236, 236, 236);
+}
+#translate {
+  margin-top: 20px;
+}
